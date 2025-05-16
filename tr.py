@@ -12,3 +12,11 @@ while i<11:
     p=m*i
     print(m,"*",i,"=",p)
     i+=1
+#Factorial
+e=int(input("Enter a number"))
+facto=1
+while e>0:
+    facto=facto*e
+    e=e-1
+print("Factorial is",facto)
+
