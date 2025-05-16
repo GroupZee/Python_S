@@ -44,3 +44,15 @@ h=973
 j=7384
 add(h,j)
 add(6738,92830)
+
+##more more functions
+def SI(amount,time,rate=0.1):
+ interest=amount*time*rate/100
+ return interest
+print(SI(239000,23,1.9),"is the interest")
+print(f'The interest is{SI(2000,12,7)}')#f is used with ' ' and {}
+def fun1(*g):
+ print(a)
+ print(type(g))
+fun1(23,3845,2.354,898,-1)
+fun1(45)
