@@ -22,5 +22,11 @@ print("\n")
 #Nested loop
 for f in range(1,11):
     for g in range(10,21):
-        print(g,end=' ')#prints row
-    print(f,end="\n")#prints column
+        print(g,end=' ')#prints column
+    print(f,end="\n")#prints row
+print("\n")
+#AlphaNumeric
+for h in range(1,11):
+    for j in range(65,91):
+        print(chr(j),end=' ')
+    print(h,end="\n")
