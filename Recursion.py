@@ -21,14 +21,12 @@ def fact(j):
         return 1
     else:
         return j*fact(j-1)
-    
-k=int(input("Enter a number"))
-print(fact(k))
+def main():    
+    k=int(input("Enter a number"))
+    print(fact(k))
+    x=int(input("Enter n:"))
+    y=int(input("Enter m:"))
+    z=str(input("Enter operator:"))
+    calc(x,y,z)
 
-
-
-
-x=int(input("Enter n:"))
-y=int(input("Enter m:"))
-z=str(input("Enter operator:"))
-calc(x,y,z)
+main()
