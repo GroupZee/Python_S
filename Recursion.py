@@ -29,4 +29,3 @@ def main():
     z=str(input("Enter operator:"))
     calc(x,y,z)
 
-main()

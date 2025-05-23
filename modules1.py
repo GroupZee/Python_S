@@ -2,7 +2,8 @@
 #import Recursion
 #import Recursion.fact
 
-#syntax 2"from program_name import *
+#syntax 2"from program_name import *[ALL]
+#syntax 3"from program_name import SPECIFIC_FUNCTION
 from funs import iseven
 #Use the a function eg main to run code outside the defined functions
 def main():
