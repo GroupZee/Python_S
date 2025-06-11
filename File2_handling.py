@@ -40,19 +40,7 @@ def addd():
     finally:
         f.close()
 #addd()
-def display ():
-    f=None
-    try:
-        f=open("Student1.txt","r")
-        s=f.read()
-        print(s)
-    except OSError:
-        print("File not found")
-    finally:
-        if f:
-            f.close()
-            
-display()
+
 file_p='Student1.txt'
 from collections import Counter
 def many(file_p):
@@ -62,4 +50,5 @@ def many(file_p):
             print(word,count)
 
 #many(file_p)           
-        
+# from File_handling import display2
+# File_handling.display2()
