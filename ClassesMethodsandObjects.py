@@ -49,9 +49,23 @@ class q:
         print("Belongs to Q")
     def m2(self):
         print("Also belongs to Q")
-class p(q):
+class p:
     def m3(self):
         print("Belongs to P")
         
-obj=p()
-obj.m1()
+#obj=p()
+#obj.m1()
+class r(p):
+    def m4(self):
+        print("This is another(3rd) class")
+#obj1=r()
+#obj1.m3()
+
+class h(q,p):
+    def m1(self):
+        print("For 5th class")
+obj2=h()
+obj2.m1()
+obj2.m3()
+
+
