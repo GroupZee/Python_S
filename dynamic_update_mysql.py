@@ -74,5 +74,6 @@ def mine2():
             print("Not Successful")
         if input("Update another student?(yes/no):").lower()=='no':
             break
+    cn.close()
 mine2()
         
