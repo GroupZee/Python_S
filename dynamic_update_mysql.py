@@ -31,12 +31,13 @@ def main1():
     print(a)
 main1()
 '''
+'''
 def mine():
     cn=mysql.connector.connect(database="d1",user="root",password="admin@123")
     c=cn.cursor()
     while True:
         rollno=int(input("Enter rollno to delete:"))
-        c.execute("DELETE FROM stud_marks WHERE rollno= %s",(rollno,))
+        c.execute("DELETE FROM stud_marks WHERE rollno= %s",(rollno,))#similar to mysql commands
         if c.rowcount>0:
             print("Delete successfully")
             cn.commit()
@@ -47,3 +48,10 @@ def mine():
             break
     cn.close()
 mine()
+'''
+def mine1():
+    cn=mysql.connector.connect(database="d1",user="root",password="admin@123")
+    c=cn.cursor()
+    c.execute("update stud_marks set name='Jk' where rollno=90323")
+    cn.commit()
+mine1()
