@@ -18,13 +18,32 @@ def main():
         ans=input("Add another one?")
         if ans=="no":
             break
-main()'''
+main()
+'''
+'''
 def main1():
     cn=mysql.connector.connect(database="d1",user="root",password="admin@123")
     c=cn.cursor()
     c.execute("select * from stud_marks")
-    #stud1=c.fetchone()
+    #stud1=c.fetchone() or fetchall()
     #print(stud1)
-    a=c.fetchall()
+    a=c.fetchmany(2)
     print(a)
 main1()
+'''
+def mine():
+    cn=mysql.connector.connect(database="d1",user="root",password="admin@123")
+    c=cn.cursor()
+    while True:
+        rollno=int(input("Enter rollno to delete:"))
+        c.execute("DELETE FROM stud_marks WHERE rollno= %s",(rollno,))
+        if c.rowcount>0:
+            print("Delete successfully")
+            cn.commit()
+        else:
+            print("Not found")
+        an=input("Delete another?")
+        if an.lower()=='no':
+            break
+    cn.close()
+mine()
