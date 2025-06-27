@@ -1,4 +1,5 @@
 import mysql.connector
+'''
 def main():
     cn=mysql.connector.connect(database="d1",user="root",password="admin@123")
     c=cn.cursor()
@@ -17,4 +18,13 @@ def main():
         ans=input("Add another one?")
         if ans=="no":
             break
-main()
+main()'''
+def main1():
+    cn=mysql.connector.connect(database="d1",user="root",password="admin@123")
+    c=cn.cursor()
+    c.execute("select * from stud_marks")
+    #stud1=c.fetchone()
+    #print(stud1)
+    a=c.fetchall()
+    print(a)
+main1()
