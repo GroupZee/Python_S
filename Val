@@ -1,0 +1,44 @@
+def analyze_character():
+    import string
+
+    while True:
+        user_input = input("Enter a single character: ")
+        if len(user_input) != 1:
+            print("Error: Please enter exactly one character.")
+            continue
+        break
+
+    char = user_input
+    ascii_code = ord(char)
+
+    print(f"\nCharacter: '{char}'")
+    print(f"ASCII code: {ascii_code}")
+
+    # ASCII Range Check
+    if 0 <= ascii_code <= 127:
+        print("✅ This is a valid ASCII character.")
+    elif 128 <= ascii_code <= 255:
+        print("ℹ️ This is an extended ASCII character.")
+    else:
+        print("❌ This is not a valid ASCII character.")
+
+    # Character Type Checks
+    if char.isalpha():
+        print("🔤 It's an alphabet.")
+        if char.lower() in 'aeiou':
+            print("🔎 It's a vowel.")
+        else:
+            print("🔎 It's a consonant.")
+    elif char.isdigit():
+        print("🔢 It's a digit.")
+    elif char in string.whitespace:
+        print("␣ It's a whitespace character (e.g., space or tab).")
+    elif char in string.punctuation:
+        print("✒️ It's a punctuation mark.")
+    elif char in '+-*/':
+        print("➗ It's a mathematical symbol.")
+    else:
+        print("🔧 It's a special character.")
+
+# Call the function to run
+analyze_character()
